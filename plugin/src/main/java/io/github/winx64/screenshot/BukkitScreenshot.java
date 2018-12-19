@@ -1,9 +1,9 @@
 package io.github.winx64.screenshot;
 
-import io.github.winx64.screenshot.api.renderer.Renderer;
-import io.github.winx64.screenshot.api.renderer.Resolution;
-import io.github.winx64.screenshot.api.renderer.Resolution.AspectRatio;
-import io.github.winx64.screenshot.api.renderer.Resolution.Pixels;
+import io.github.winx64.screenshot.render.Renderer;
+import io.github.winx64.screenshot.render.Resolution;
+import io.github.winx64.screenshot.render.Resolution.AspectRatio;
+import io.github.winx64.screenshot.render.Resolution.Pixels;
 import io.github.winx64.screenshot.render.DefaultScreenRenderer;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

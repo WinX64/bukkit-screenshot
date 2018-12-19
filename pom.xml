@@ -13,7 +13,6 @@
 
     <modules>
         <module>core</module>
-        <module>api</module>
         <module>plugin</module>
     </modules>
 

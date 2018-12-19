@@ -46,7 +46,6 @@
                                 <includes>
                                     <include>io.github.winx64:bukkit-screenshot-plugin</include>
                                     <include>io.github.winx64:bukkit-screenshot-core</include>
-                                    <include>io.github.winx64:bukkit-screenshot-api</include>
                                 </includes>
                             </artifactSet>
                         </configuration>

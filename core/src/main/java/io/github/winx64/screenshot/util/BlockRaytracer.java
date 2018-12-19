@@ -1,6 +1,5 @@
 package io.github.winx64.screenshot.util;
 
-import io.github.winx64.screenshot.api.util.MathUtil;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;

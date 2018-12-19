@@ -1,9 +1,9 @@
 package io.github.winx64.screenshot.raytrace;
 
-import io.github.winx64.screenshot.api.model.Model;
-import io.github.winx64.screenshot.api.raytrace.AbstractRegistryRaytracer;
-import io.github.winx64.screenshot.api.util.Intersection;
-import io.github.winx64.screenshot.api.util.MathUtil;
+import io.github.winx64.screenshot.model.Model;
+import io.github.winx64.screenshot.registry.ModelRegistry;
+import io.github.winx64.screenshot.util.Intersection;
+import io.github.winx64.screenshot.util.MathUtil;
 import io.github.winx64.screenshot.registry.DefaultModelRegistry;
 import io.github.winx64.screenshot.util.BlockRaytracer;
 import org.bukkit.Color;
@@ -14,15 +14,16 @@ import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.util.Vector;
 
-public class DefaultRaytracer extends AbstractRegistryRaytracer {
+public class DefaultRaytracer implements Raytracer {
 
     private static final int MAX_DISTANCE = 300;
     private static final int REFLECTION_DEPTH = 10;
 
+    private final ModelRegistry textureRegistry;
     private Block reflectedBlock;
 
     public DefaultRaytracer() {
-        super(new DefaultModelRegistry());
+        this.textureRegistry = new DefaultModelRegistry();
         this.textureRegistry.initialize();
 
         this.reflectedBlock = null;

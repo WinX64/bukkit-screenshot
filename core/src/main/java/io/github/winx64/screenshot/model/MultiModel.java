@@ -3,7 +3,7 @@ package io.github.winx64.screenshot.model;
 import org.bukkit.block.Block;
 import org.bukkit.util.Vector;
 
-import io.github.winx64.screenshot.api.util.Intersection;
+import io.github.winx64.screenshot.util.Intersection;
 
 public class MultiModel extends SimpleModel {
 

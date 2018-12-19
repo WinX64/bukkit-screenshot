@@ -1,7 +1,6 @@
 package io.github.winx64.screenshot.registry;
 
-import io.github.winx64.screenshot.api.model.Model;
-import io.github.winx64.screenshot.api.registry.AbstractModelRegistry;
+import io.github.winx64.screenshot.model.Model;
 import io.github.winx64.screenshot.model.AbstractModel.Builder;
 import org.bukkit.Color;
 import org.bukkit.Material;
@@ -13,16 +12,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
 
-public class DefaultModelRegistry extends AbstractModelRegistry {
+public class DefaultModelRegistry implements ModelRegistry {
 
     private static final String IMAGE_RESOURCE = "terrain.png";
     private static final int TEXTURE_SIZE = 16;
 
+    private final Map<Material, Map<BlockData, Model>> modelMap;
     private BufferedImage textures;
 
     public DefaultModelRegistry() {
-        super(new HashMap<>());
+        this.modelMap = new HashMap<>();
     }
 
     @Override

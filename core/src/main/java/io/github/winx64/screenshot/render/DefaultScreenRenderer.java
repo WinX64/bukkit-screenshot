@@ -1,8 +1,7 @@
 package io.github.winx64.screenshot.render;
 
-import io.github.winx64.screenshot.api.renderer.AbstractRaytraceRenderer;
-import io.github.winx64.screenshot.api.renderer.Resolution;
-import io.github.winx64.screenshot.api.util.MathUtil;
+import io.github.winx64.screenshot.raytrace.Raytracer;
+import io.github.winx64.screenshot.util.MathUtil;
 import io.github.winx64.screenshot.raytrace.DefaultRaytracer;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -14,7 +13,7 @@ import java.awt.image.DataBufferInt;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DefaultScreenRenderer extends AbstractRaytraceRenderer {
+public class DefaultScreenRenderer implements Renderer {
 
     private static final double FOV_YAW_DEG = 53;
     private static final double FOV_PITCH_DEG = 23;
@@ -24,8 +23,10 @@ public class DefaultScreenRenderer extends AbstractRaytraceRenderer {
 
     private static final Vector BASE_VEC = new Vector(1, 0, 0);
 
+    private final Raytracer raytracer;
+
     public DefaultScreenRenderer() {
-        super(new DefaultRaytracer());
+        this.raytracer = new DefaultRaytracer();
     }
 
     @Override

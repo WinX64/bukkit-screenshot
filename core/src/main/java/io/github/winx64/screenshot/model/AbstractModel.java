@@ -1,7 +1,6 @@
 package io.github.winx64.screenshot.model;
 
 import com.google.common.base.Preconditions;
-import io.github.winx64.screenshot.api.model.Model;
 import io.github.winx64.screenshot.model.CrossModel.CrossModelBuilder;
 import io.github.winx64.screenshot.model.MultiModel.MultiModelBuilder;
 import io.github.winx64.screenshot.model.OctahedronModel.OctahedronModelBuilder;

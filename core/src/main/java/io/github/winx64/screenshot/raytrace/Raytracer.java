@@ -1,4 +1,4 @@
-package io.github.winx64.screenshot.api.raytrace;
+package io.github.winx64.screenshot.raytrace;
 
 import org.bukkit.World;
 import org.bukkit.util.Vector;

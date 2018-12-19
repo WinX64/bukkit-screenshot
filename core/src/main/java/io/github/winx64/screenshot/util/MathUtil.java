@@ -1,4 +1,4 @@
-package io.github.winx64.screenshot.api.util;
+package io.github.winx64.screenshot.util;
 
 import org.bukkit.Color;
 import org.bukkit.block.BlockFace;

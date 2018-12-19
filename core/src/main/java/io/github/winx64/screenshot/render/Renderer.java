@@ -1,4 +1,4 @@
-package io.github.winx64.screenshot.api.renderer;
+package io.github.winx64.screenshot.render;
 
 import org.bukkit.entity.Player;
 

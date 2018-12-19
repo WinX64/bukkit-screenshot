@@ -10,42 +10,6 @@
     <artifactId>bukkit-screenshot-core</artifactId>
 
     <name>BukkitScreenshotCore</name>
-    <description>Default implementation of the BukkitScreenshot API</description>
+    <description>Core components of Bukkit Screenshot</description>
     <url>https://github.com/WinX64/bukkit-screenshot/core</url>
-
-    <dependencies>
-        <dependency>
-            <groupId>io.github.winx64</groupId>
-            <artifactId>bukkit-screenshot-api</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.3</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <finalName>${project.name}-${project.version}</finalName>
-                            <artifactSet>
-                                <includes>
-                                    <include>io.github.winx64:bukkit-screenshot-core</include>
-                                    <include>io.github.winx64:bukkit-screenshot-api</include>
-                                </includes>
-                            </artifactSet>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

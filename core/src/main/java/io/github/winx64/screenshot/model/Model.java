@@ -1,8 +1,8 @@
-package io.github.winx64.screenshot.api.model;
+package io.github.winx64.screenshot.model;
 
 import org.bukkit.block.Block;
 
-import io.github.winx64.screenshot.api.util.Intersection;
+import io.github.winx64.screenshot.util.Intersection;
 
 public interface Model {
 
