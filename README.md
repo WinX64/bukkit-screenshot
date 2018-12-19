@@ -18,7 +18,7 @@ This project uses Maven as build and dependency management tool.
 
 ## How to use
 
-If you're interested in integrating Bukkit Screenshot into your projects, further information can be found on the [API](api) specification and its default [implementation](api).
+If you're interested in integrating Bukkit Screenshot into your projects, further information can be found on the [API](api) specification and its default [implementation](core).
 
 If you're looking for a quick way to test out Bukkit Screenshot right away, a proof-of-concept, Bukkit, test plugin can be found [here](plugin).
 
