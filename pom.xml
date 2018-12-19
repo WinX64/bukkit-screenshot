@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.winx64</groupId>
+    <artifactId>bukkit-screenshot-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>BukkitScreenshotParent</name>
+    <description>Parent module of the entire BukkitScreenshot project</description>
+    <url>https://github.com/WinX64/bukkit-screenshot</url>
+
+    <modules>
+        <module>core</module>
+        <module>api</module>
+        <module>plugin</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.13-R0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <issueManagement>
+        <url>https://github.com/WinX64/bukkit-screenshot/issues</url>
+        <system>GitHub</system>
+    </issueManagement>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

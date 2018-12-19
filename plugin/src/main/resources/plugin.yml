@@ -1,0 +1,13 @@
+main: io.github.winx64.screenshot.BukkitScreenshot
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+author: '123'
+website: ${project.parent.url}
+api-version: 1.13
+
+commands:
+  screenshot:
+    description: Takes a screenshot of the player's screen
+    usage: /screenshot [resolution] [aspect ratio]
+    permission: bukkitscreenshot.command.screenshot

@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.github.winx64</groupId>
+        <artifactId>bukkit-screenshot-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>bukkit-screenshot-plugin</artifactId>
+
+    <name>BukkitScreenshot</name>
+    <description>Let the server take a picture of your screen</description>
+    <url>https://github.com/WinX64/bukkit-screenshot/plugin</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.winx64</groupId>
+            <artifactId>bukkit-screenshot-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <finalName>${project.name}-${project.version}</finalName>
+                            <artifactSet>
+                                <includes>
+                                    <include>io.github.winx64:bukkit-screenshot-plugin</include>
+                                    <include>io.github.winx64:bukkit-screenshot-core</include>
+                                    <include>io.github.winx64:bukkit-screenshot-api</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
